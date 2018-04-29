@@ -92,7 +92,9 @@ $(
 
       it("second loaded feed has different entries", function(done) {
         feedEntriesTwo = feed.children();
-        expect(feedEntriesTwo).not.toBe(feedEntriesOne);
+        let firstFeedFirstEntry = feedEntriesOne[0];
+        let secondFeedFirstEntry = feedEntriesTwo[0];
+        expect(secondFeedFirstEntry.innerHTML).not.toMatch(firstFeedFirstEntry.innerHTML);
         done();
       });
 
