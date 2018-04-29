@@ -81,7 +81,7 @@ $(
       });
 
       it("initially the DOM article with entry class is empty", function() {
-        expect($(".feed").innerHTML).not.toBeDefined();
+        expect($(".feed").html()).toMatch("");
       });
 
       it("feed loaded initial entries", function(done) {
