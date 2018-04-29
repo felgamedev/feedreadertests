@@ -30,7 +30,7 @@ $(
       it("have non empty, valid URLs", function() {
         for (let i = 0; i < allFeeds.length; i++) {
           expect(allFeeds[i].url).toBeDefined();
-          expect(allFeeds[i].url).toContain("http://");
+          expect(allFeeds[i].url).toMatch(/http|https/);
         }
       });
 
